@@ -1,0 +1,16 @@
+YOLO11n D-Fire Test Evaluation
+
+Dataset: D-Fire
+Test Images: 4306
+Classes: smoke, fire
+Training Epochs: 10
+
+Overall Results:
+Precision: 0.536
+Recall: 0.488
+mAP50: 0.490
+mAP50-95: 0.241
+
+Class-wise mAP50:
+Smoke: 0.496
+Fire: 0.483

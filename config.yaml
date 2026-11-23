@@ -1,0 +1,30 @@
+project:
+  name: Forest Fire & Smoke Early Warning System
+  version: 1.0
+  domain: Environmental Monitoring
+
+model:
+  name: YOLO11n
+  weights: models/fire_smoke_yolo11n.pt
+  classes:
+    - smoke
+    - fire
+
+training:
+  epochs: 10
+  image_size: 640
+  batch_size: 8
+  optimizer: Adam
+  learning_rate: 0.001
+  regularization: L2
+
+dataset:
+  name: D-Fire
+  train_path: data/train/images
+  val_path: data/val/images
+  test_path: data/test/images
+
+early_warning:
+  enabled: true
+  fire_threshold: 0.50
+  smoke_threshold: 0.50
